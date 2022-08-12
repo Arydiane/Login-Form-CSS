@@ -110,6 +110,7 @@ label {
     background-position: 2% 50%;
 }
 
+/* --- Personalização do Checkbox - Inicio --- */ 
 #container-checkbox {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -119,28 +120,27 @@ label {
     align-items: center;    
 }
 
-/* --- Personalização do Checkbox - Inicio --- */ 
 .col-left #lembrar {
     display: none;
 }
 
 .col-left #lembrar + label::before {
     content: "";
-    width: 18px;
-    height: 18px;
-    border-radius: 4px;
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 0.5rem;
     background-color: var(--form-background);
-    border: 1px solid var(--text-base);
+    border: 0.1rem solid var(--text-base);
     display: inline-block;
     vertical-align: middle;
-    margin-right: 8px;
-    margin-bottom: 3px;
+    margin-right: 0.8rem;
+    margin-bottom: 0.3rem;
     cursor: pointer;
 }
 
 .col-left #lembrar:checked + label::before {
     background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    border: 0.1rem solid var(--primary-color);
     background-image: url(./images/check.svg);
     background-position: center;
 }
@@ -152,11 +152,34 @@ label {
     font-size: 1.4rem;
 }
 
+.link:hover {
+    color: var(--text-title);
+}
+
 .destaque {
     font-size: 1.4rem;
     color: var(--primary-color);
 }
 
+/* --- Personalização do Botão - Inicio --- */ 
+#btn-entrar {
+    width: 100%;
+    height: 3.5rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--form-background);
+    background-color: var(--primary-color);
+    border: 0.5rem solid var(--primary-color);
+    border-radius: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+#btn-entrar:hover {
+    box-shadow: 0.1rem 0.1rem 0.5rem var(--primary-color);
+}
+/* --- Personalização do Botão - Fim --- */ 
+
+/* --- Imagem de fundo - Inicio --- */ 
 #container-image {
     height: 100vh;
     overflow: hidden;
@@ -167,3 +190,4 @@ label {
     height: 100%;
     object-fit: cover;
 }
+/* --- Imagem de fundo - Fim --- */ 
