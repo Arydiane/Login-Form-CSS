@@ -28,6 +28,7 @@ body {
 header {
     margin-left: 4rem;
     margin-top: 4rem;
+    margin-bottom: 6rem;
 }
 
 #container-form {
@@ -178,6 +179,10 @@ label {
     box-shadow: 0.1rem 0.1rem 0.5rem var(--primary-color);
 }
 /* --- Personalização do Botão - Fim --- */ 
+
+p.destaque {
+    text-align: center;
+}
 
 /* --- Imagem de fundo - Inicio --- */ 
 #container-image {
