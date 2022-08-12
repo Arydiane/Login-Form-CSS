@@ -25,16 +25,22 @@
                         
             <form action="">
                 <label for="email">E-mail</label>
-                <input type="email" name="email" id="email" placeholder="Digite seu e-mail">
+                <input type="email" name="email" id="email" placeholder="Digite seu e-mail"  required autofocus>
                 <label for="senha">Senha</label>
-                <input type="password" name="senha" id="senha" placeholder="Digite sua senha" >
+                <input type="password" name="senha" id="senha" placeholder="Digite sua senha"  required >
                 
                 <div id="container-checkbox">
-                    <input type="checkbox" name="lembrar" id="lembrar">
-                    <label id="lembrar" for="lembrar">Lembre-me</label>
-                    <a href="#" class="destaque link">Esqueci minha senha</a>
+                    <div class="col-left">
+                        <input type="checkbox" name="lembrar" id="lembrar" value="yes" >
+                        <label id="label-lembrar" for="lembrar">Lembre-me</label>
+                    </div>
+                    <div class="col-rigth">
+                        <a href="#" class="destaque link">Esqueci minha senha</a>
+                    </div>
+                    
                 </div>
-                <input type="submit" value="ENTRAR" id="entrar">
+
+                <input type="submit" value="ENTRAR" id="btn-entrar">
                 <p class="destaque">Não tem uma conta? <a href="#" class="destaque link">Registre-se</a></p>
             </form>
         </div>

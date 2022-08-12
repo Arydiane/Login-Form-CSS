@@ -16,8 +16,6 @@ html {
     font-size: 62.5%; /* font-size 1em = 10px  */
 }
 
-
-
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
@@ -37,7 +35,6 @@ header {
     width: 70%;
     height: 70%;
     margin: 0 auto;
-
 }
 
 form{
@@ -58,9 +55,16 @@ form{
     font-size: 2.4rem;
 }
 
-.subtitle,  #lembrar{
-    text-align: center;
+.subtitle,  
+#label-lembrar, 
+#email, 
+#senha {
     font-family: 'Roboto', sans-serif;
+}
+
+.subtitle {
+    width: 70%;
+    margin: 0 auto;
 }
 
 label {
@@ -69,37 +73,83 @@ label {
     margin-bottom: 0.5rem;
 }
 
-input[type="checkbox"], #lembrar {
+#label-lembrar {
     display: inline;
 }
 
-#email, #senha {
+#email, 
+#senha {
     display: block;
     padding-left: 3rem;
     width: 100%;
     height: 3.5rem;
-    border-radius: 0.2rem solid var(--text-title);
-    /*outline: auto;*/
+    color: var(--text-base);
+    border: 0.1rem solid var(--text-base);
+    border-radius: 0.5rem;
 }
 
 #email {
     background: url(./images/mail.svg) no-repeat;
-    background-position: 0.5rem 0.5rem;
+    background-position: 2% 50%;
 }
 
 #senha {
-    background: url(./images/lock.svg) no-repeat;
-    background-position: 0.5rem 0.5rem;
+    background: url(./images/lock.svg) no-repeat, url(./images/eye.svg) no-repeat;
+    background-position: 2% 50%, 98% 50%;
+}
+
+#email:focus {
+    outline-color: var(--primary-color);
+    background: url(./images/mail-focus.svg) no-repeat;
+    background-position: 2% 50%;
+}
+
+#senha:focus {
+    outline-color: var(--primary-color);
+    background: url(./images/lock-focus.svg) no-repeat;
+    background-position: 2% 50%;
 }
 
 #container-checkbox {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
 }
+
+/* --- Personalização do Checkbox - Inicio --- */ 
+.col-left #lembrar {
+    display: none;
+}
+
+.col-left #lembrar + label::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    background-color: var(--form-background);
+    border: 1px solid var(--text-base);
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+
+.col-left #lembrar:checked + label::before {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background-image: url(./images/check.svg);
+    background-position: center;
+}
+/* --- Personalização do Checkbox - Fim --- */ 
 
 .link {
     font-weight: bold;
     text-decoration: none;
+    font-size: 1.4rem;
 }
 
 .destaque {
